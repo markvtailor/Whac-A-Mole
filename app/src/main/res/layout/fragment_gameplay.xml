@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/sky"
+    android:theme="@style/Theme.WhacAMole"
+    tools:context=".presentation.fragments.GameplayFragment">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/timer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="@string/timer"
+        android:textAppearance="?attr/textAppearanceBodyLarge"
+        android:textStyle="bold"
+        android:textSize="48sp"
+        android:textAlignment="center"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/counter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="48sp"
+        android:text="@string/basic_score"
+        android:textStyle="bold"
+        android:textAppearance="?attr/textAppearanceBody1"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/timer"
+        android:paddingTop="16dp"/>
+
+    <FrameLayout
+        android:id="@+id/game_field"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        <ImageView
+            android:layout_width="match_parent"
+            android:scaleType="center"
+            android:layout_height="match_parent"
+            android:src="@drawable/grass" />
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_width="360dp"
+            android:layout_height="360dp"
+            android:padding="80dp"
+            android:background="@drawable/ground"
+            android:scaleType="centerCrop"/>
+        <GridLayout
+            android:layout_width="360dp"
+            android:layout_height="360dp"
+            android:columnCount="3"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:id="@+id/hole1"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/hole"
+                android:alpha="2"
+                />
+            <ImageView
+                android:id="@+id/hole2"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/hole"
+                android:alpha="2"
+                />
+            <ImageView
+                android:id="@+id/hole3"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/hole"
+                android:alpha="2"
+                />
+            <ImageView
+                android:id="@+id/hole4"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/hole"
+                android:alpha="2"
+                />
+            <ImageView
+                android:id="@+id/hole5"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/hole"
+                android:alpha="2"
+                />
+            <ImageView
+                android:id="@+id/hole6"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/hole"
+                android:alpha="2"
+                />
+            <ImageView
+                android:id="@+id/hole7"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/hole"
+                android:alpha="2"
+                />
+            <ImageView
+                android:id="@+id/hole8"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/hole"
+                android:alpha="2"
+                />
+            <ImageView
+                android:id="@+id/hole9"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/hole"
+                android:alpha="2"
+                />
+
+
+        </GridLayout>
+        <RelativeLayout
+            android:layout_width="360dp"
+            android:layout_height="360dp"
+            android:layout_gravity="center"
+            >
+
+            <ImageView
+                android:id="@+id/mole1"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginStart="22dp"
+                android:src="@drawable/mole"
+                android:visibility="invisible"
+                />
+
+            <ImageView
+                android:id="@+id/mole2"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="45dp"
+                android:layout_toEndOf="@id/mole1"
+                android:src="@drawable/mole"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/mole3"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@id/mole2"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginStart="45dp"
+                android:src="@drawable/mole"
+                android:visibility="invisible"
+                />
+
+            <ImageView
+                android:id="@+id/mole4"
+                android:layout_below="@id/mole1"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="45dp"
+                android:src="@drawable/mole"
+                android:visibility="invisible"
+                />
+
+            <ImageView
+                android:id="@+id/mole5"
+                android:layout_below="@id/mole1"
+                android:layout_toEndOf="@id/mole4"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginStart="45dp"
+                android:layout_marginTop="45dp"
+                android:src="@drawable/mole"
+                android:visibility="invisible"
+
+                />
+
+            <ImageView
+                android:id="@+id/mole6"
+                android:layout_below="@id/mole1"
+                android:layout_toEndOf="@id/mole5"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginStart="45dp"
+                android:layout_marginTop="45dp"
+                android:src="@drawable/mole"
+                android:visibility="invisible"
+                />
+
+            <ImageView
+                android:id="@+id/mole7"
+                android:layout_below="@id/mole4"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="45dp"
+                android:src="@drawable/mole"
+                android:visibility="invisible"
+                />
+
+            <ImageView
+                android:id="@+id/mole8"
+                android:layout_below="@id/mole4"
+                android:layout_toEndOf="@id/mole7"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginStart="45dp"
+                android:layout_marginTop="45dp"
+                android:src="@drawable/mole"
+                android:visibility="invisible"
+                />
+
+            <ImageView
+                android:id="@+id/mole9"
+                android:layout_below="@id/mole4"
+                android:layout_toEndOf="@id/mole5"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginStart="45dp"
+                android:layout_marginTop="45dp"
+                android:src="@drawable/mole"
+                android:visibility="invisible"
+                />
+
+        </RelativeLayout>
+    </FrameLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

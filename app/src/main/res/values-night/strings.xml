@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hit_a_mole_to_get_a_score">Hit a mole to get a score!</string>
+    <string name="top_score">TOP SCORE</string>
+    <string name="play_again">PLAY AGAIN</string>
+    <string name="menu">MENU</string>
+    <string name="play">PLAY</string>
+    <string name="top_score_starter">Top score</string>
+    <string name="title">Whac-A-Mole!</string>
+    <string name="game_over">GAME OVER!</string>
+</resources>
